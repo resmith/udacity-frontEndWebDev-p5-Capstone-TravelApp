@@ -1,10 +1,8 @@
 /* Function to GET Project Data */
 const handleSubmit = (event) => {
   event.preventDefault();
-  let formText = document.getElementById("text").value;
-  const checkedText = Client.checkForName(formText);
-  const cleanedText = Client.cleanText(checkedText);
-  Client.getSentiment(cleanedText).then((data) => Client.updateUI(data));
+  const city = document.getElementById("city").value;
+  Client.getCoordinates(city).then((data) => Client.updateUICoordinates(data));
 };
 
 export { handleSubmit };

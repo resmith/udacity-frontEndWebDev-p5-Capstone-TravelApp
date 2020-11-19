@@ -2,56 +2,72 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Test</title>
-    <link rel="stylesheet" href="/styles/resets.css" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/form.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
   </head>
 
   <body>
     <div id="pageContainer">
       <div id="header">
         <header class="header">
-          <h1>Sentence Sentimentality</h1>
+          <h1>Travel Planner</h1>
         </header>
+      </div>
+      <div id="cityImage">
+        <image></image>
       </div>
       <div id="input">
         <section>
-          <h2>Input</h2>
-          <form class="" onsubmit="return Client.handleSubmit(event)">
-            <input
-              id="text"
-              type="text"
-              name="input"
-              value=""
-              placeholder="Name"
-            />
-            <input
-              type="submit"
-              name="submit"
-              value="submit"
-              onclick="return Client.handleSubmit(event)"
-              onsubmit="return handleSubmit(event)"
-            />
-          </form>
+          <h2>Trip</h2>
+          <div class="card light-grey cardMods">
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+              <input id="city" type="text" name="city" placeholder="City" />
+              <input id="date" type="date" name="date" placeholder="" />
+              <button
+                class="waves-effect waves-light btn"
+                type="submit"
+                name="submit"
+                value="submit"
+                onclick="return Client.handleSubmit(event)"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </section>
       </div>
 
-      <div id="results">
+      <div id="coordinatesContainer">
         <section>
-          <h2>Results</h2>
-          <div id="resultsContainer">
-            <div id="agreementLabel">Agreement:</div>
-            <div id="agreement"></div>
-            <div id="subjectivityLabel">Subjectivity:</div>
-            <div id="subjectivity"></div>
-            <div id="confidenceLabel">Confidence:</div>
-            <div id="confidence"></div>
-            <div id="ironyLabel">Irony:</div>
-            <div id="irony"></div>
-          </div>
+          <h2>Coordinates</h2>
+
+          <div id="lat">Lat TBD</div>
+          <div id="long">Long TBD</div>
+        </section>
+      </div>
+
+      <div id="forecastContainer">
+        <section>
+          <h2>Forecast</h2>
+
+          <div id="forecast">Forecast TBD</div>
         </section>
       </div>
 
@@ -61,7 +77,7 @@
         </footer>
       </div>
     </div>
-    <script>
+    <!-- <script>
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
@@ -69,6 +85,6 @@
           navigator.serviceWorker.register("/service-worker.js");
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>

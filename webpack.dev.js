@@ -21,9 +21,8 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader"],
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
@@ -43,3 +42,6 @@ module.exports = {
     new WorkboxPlugin.GenerateSW(),
   ],
 };
+
+// "@babel/plugin-transform-regenerator",
+// "@babel/plugin-transform-runtime",

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The purpose of this application is to demonstrate:
+The purpose of this application is the capstone project for Udacity Front-End Web developer to demonstrate:
 
 - webpack and it's plugins
 
@@ -54,29 +54,58 @@ To run the test
 
 ```
 cd <directoryClonedTo>
+export API_GEONAME_KEY=<GeonameApiKey>
 npm run test
 ```
 
-## Meaning Cloud API
+## Base Requirements
 
-Meaning Cloud provides a _sentiment_ analysis of text. Provide it with text and additional paramters and it provides:
+### Screen Inputs
 
-```
-    "agreement": "AGREEMENT",
-    "subjectivity": "OBJECTIVE",
-    "confidence": "100",
-    "irony": "NONIRONIC",
-```
+1. City user is traveling to
+2. The date they are leaving
 
-### Reference
+### Screen Returns
 
-[Api](https://www.meaningcloud.com/developer/sentiment-analysis)
+1. Weather Forecast
 
-[Request](https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/request)
+- If the trip is within a week - return the current weather forecast
+- If the trip is further out - return a predicted forecast.
 
-[Example](https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/examples)
+## API's Called
 
-[Dev Tools](https://www.meaningcloud.com/developer/sentiment-analysis/dev-tools)
+### Geonames
 
-[Console](https://www.meaningcloud.com/developer/sentiment-analysis/console)
-# udacity-frontEndWebDev-p5-Capstone-TravelApp
+Input: City
+Return: Coordinates (latitude, longitude, country,)
+
+[Geonames API](http://www.geonames.org/export/web-services.html)
+
+### WeatherBit
+
+Input: Zip Code
+Send: Weather Forecast
+
+[WeatherBit API](https://www.weatherbit.io/api)
+Input: Coordinate
+Return: Weather Forecast
+
+## Rest Pixabay
+
+[Pixabay API](https://pixabay.com/api/docs/)
+Input: Coordinate
+Return: Images of the area
+
+## Rest Countries
+
+[Rest Countries](https://restcountries.eu/)
+Input: Location
+Return: Information about the country
+
+## Additional Requirements
+
+Add end date and display length of trip.
+Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities).
+
+Integrate the REST Countries API to pull in data for the country being visited.
+Incorporate icons into forecast.

@@ -1,15 +1,24 @@
 import { checkForName, cleanText } from "./js/utils";
-import { updateUI } from "./js/updateUI";
-import { getSentiment } from "./js/getSentiment";
+import { updateUICoordinates } from "./js/updateUICoordinates";
+import { getCoordinates } from "./js/getCoordinates";
 import { handleSubmit } from "./js/formHandler";
+import { app } from "./js/app";
 
-export { checkForName, cleanText, updateUI, getSentiment, handleSubmit };
+export {
+  app,
+  checkForName,
+  cleanText,
+  updateUICoordinates,
+  getCoordinates,
+  handleSubmit,
+};
 
-import "./styles/resets.css";
-import "./styles/base.css";
-import "./styles/header.css";
-import "./styles/form.css";
-import "./styles/footer.css";
-import "./styles/results.css";
+import "./styles/resets.scss";
+import "./styles/base.scss";
+import "./styles/grid.scss";
+import "./styles/header.scss";
+import "./styles/form.scss";
+import "./styles/footer.scss";
+import "./styles/results.scss";
 
 console.log("Client started");

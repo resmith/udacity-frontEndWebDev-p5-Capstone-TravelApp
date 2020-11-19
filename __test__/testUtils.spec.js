@@ -6,15 +6,3 @@ describe("Testing the utils functionality", () => {
     expect(cleanText("he ?/|llo")).toBe("he llo");
   });
 });
-
-describe("Testing the utils functionality", () => {
-  test("Testing the checkForName() function", () => {
-    expect(checkForName("Picard")).toBe("Welcome, Captain!");
-  });
-});
-
-describe("Testing the utils functionality", () => {
-  test("Testing the checkForName() function", () => {
-    expect(checkForName("Something Else")).toBe("Something Else");
-  });
-});

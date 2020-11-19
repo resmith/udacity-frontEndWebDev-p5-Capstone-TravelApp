@@ -2,11 +2,12 @@
   #pageContainer {
     display: grid;
     grid-template-columns: 10vw 40vw 35vw;
-    grid-template-rows: 10vh 40vh 40vh 10vh;
+    grid-template-rows: 7vh 20vh 20vh 20vh 20vh;
     grid-template-areas:
       ". header header"
-      ". input input"
-      ". results results"
+      "cityImage input input"
+      "cityImage coordinatesContainer coordinatesContainer"
+      "cityImage forecastContainer forecastContainer"
       ". footer footer";
   }
 
@@ -19,13 +20,14 @@
 @media (min-width: 800px) and (max-width: 1200px) {
   #pageContainer {
     display: grid;
-    grid-template-columns: 10vw 40vw 35vw;
-    grid-template-rows: 10vh 40vh 40vh 10vh;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 7vh 40vh 20vh 20vh 20vh;
     grid-template-areas:
       ". header header"
-      ". input input"
-      ". results results"
-      ". footer footer";
+      "cityImage input input"
+      "cityImage coordinatesContainer coordinatesContainer"
+      "cityImage forecastContainer forecastContainer"
+      ". Facts Facts";
   }
 
   body {
@@ -38,11 +40,12 @@
   #pageContainer {
     display: grid;
     grid-template-columns: 10vw 40vw 35vw;
-    grid-template-rows: 10vh 40vh 40vh 10vh;
+    grid-template-rows: 7vh 20vh 20vh 20vh 20vh;
     grid-template-areas:
       ". header header"
       ". input input"
-      ". results results"
+      "cityImage coordinatesContainer coordinatesContainer"
+      ". forecastContainer forecastContainer"
       ". footer footer";
   }
 
@@ -59,8 +62,16 @@
   grid-area: input;
 }
 
-#results {
-  grid-area: results;
+#cityImage {
+  grid-area: cityImage;
+}
+
+#coordinatesContainer {
+  grid-area: coordinatesContainer;
+}
+
+#forecastContainer {
+  grid-area: forecastContainer;
 }
 
 #footer {

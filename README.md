@@ -6,7 +6,9 @@ The purpose of this application is to demonstrate:
 
 - webpack and it's plugins
   -- CSS
+
   -- service workers for offline access
+
   -- webpack dev server
 
 - Testing / Jest

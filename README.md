@@ -68,7 +68,11 @@ Meaning Cloud provides a _sentiment_ analysis of text. Provide it with text and 
 ### Reference
 
 [Api](https://www.meaningcloud.com/developer/sentiment-analysis)
+
 [Request](https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/request)
+
 [Example](https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/examples)
+
 [Dev Tools](https://www.meaningcloud.com/developer/sentiment-analysis/dev-tools)
+
 [Console](https://www.meaningcloud.com/developer/sentiment-analysis/console)

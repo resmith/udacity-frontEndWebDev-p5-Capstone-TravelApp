@@ -1,0 +1,42 @@
+#resultsContainer {
+  display: grid;
+  grid-template-columns: 120px 15px 120px;
+  grid-template-rows: 40px 40px 40px 40px;
+  grid-template-areas:
+    "agreementLabel . agreement"
+    "subjectivityLabel . subjectivity"
+    "confidenceLabel . confidence"
+    "ironyLabel . irony";
+}
+
+#agreementLabel {
+  grid-area: agreementLabel;
+}
+
+#agreement {
+  grid-area: agreement;
+}
+
+#subjectivityLabel {
+  grid-area: subjectivityLabel;
+}
+
+#subjectivity {
+  grid-area: subjectivity;
+}
+
+#confidenceLabel {
+  grid-area: confidenceLabel;
+}
+
+#confidence {
+  grid-area: confidence;
+}
+
+#ironyLabel {
+  grid-area: ironyLabel;
+}
+
+#irony {
+  grid-area: irony;
+}

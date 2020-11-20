@@ -30,8 +30,15 @@ git clone <thisRepo>
 - edit the .env file at the project root directory, with your API key in the format
 
 ```
-API_KEY=<yourAPiKey - without quotes>
+API_GEONAME_KEY=<yourAPiKey - without quotes>
+API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
+API_PIXABAY_KEY=<yourAPiKey - without quotes>
 ```
+
+\*note:
+
+- Country facts do not require a key
+- For testing, these keys will need to be created for the shell the test is run
 
 3. Start the server
 
@@ -54,7 +61,9 @@ To run the test
 
 ```
 cd <directoryClonedTo>
-export API_GEONAME_KEY=<GeonameApiKey>
+API_GEONAME_KEY=<yourAPiKey - without quotes>
+API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
+API_PIXABAY_KEY=<yourAPiKey - without quotes>
 npm run test
 ```
 

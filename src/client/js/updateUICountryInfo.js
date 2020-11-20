@@ -1,12 +1,11 @@
 const updateUICountryInfo = async (data) => {
-  console.log("updateUICountryInfo data: ", data);
   const factsSelector = document.querySelector("#facts");
-  const countryFacts = `name: ${data.name} <br>
-  capital: ${data.capital}     currencies: ${data.currencies[0].name} <br>
-  domain: ${data.topLevelDomain[0]}`;
-  console.log("updateUICountryInfo countryFacts: ", countryFacts);
+  const countryFacts = `Name: ${data.name} <br>
+  Capital: ${data.capital}  <br>
+  Currency: ${data.currencies[0].name} <br>
+  Domain: ${data.topLevelDomain[0]}`;
   try {
-    factsSelector.textContent = countryFacts;
+    factsSelector.innerHTML = countryFacts;
     return data;
   } catch (error) {
     console.log("error", error);

@@ -1,5 +1,4 @@
 const getWeather = async (coords) => {
-  console.log("getWeather coords: ", coords);
   const url = `http://localhost:8081/weather?lat=${coords.lat}&lng=${coords.lng}`;
   try {
     const response = await fetch(url);

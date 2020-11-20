@@ -9,7 +9,6 @@ const app = () => {
   });
 
   const dateToday = Client.formatDate(Date.now());
-  console.log("app dateToday: ", dateToday);
   const dateInput = document.getElementById(dateInputId);
   dateInput.value = dateToday;
 };

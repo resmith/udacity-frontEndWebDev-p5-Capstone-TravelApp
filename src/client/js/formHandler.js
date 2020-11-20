@@ -16,13 +16,11 @@ const handleSubmit = (event) => {
       })
       .then((forecastInfo) => Client.getWeather(forecastInfo))
       .then((forecast) => Client.updateUIWeather(forecast))
-      .then(() => {
-        console.log("handleSubmit forecastInfo: ", forecastInfo);
-      })
       .then(() => Client.getCountryInfo(forecastInfo.countryCode))
       .then((countryInfo) => Client.updateUICountryInfo(countryInfo))
       .then(() => Client.getPic(city))
-      .then((picInfo) => Client.updateUIPic(picInfo));
+      .then((picInfo) => Client.updateUIPic(picInfo))
+      .then(() => Client.updateUICountdown());
   } else {
     alert("Need to enter a city first");
   }

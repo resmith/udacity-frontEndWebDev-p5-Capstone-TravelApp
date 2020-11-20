@@ -40,7 +40,6 @@ app.get("/coordinates", function (req, res) {
   retrieveCoordinates(city)
     .then((data) => createCoordinatesObject(data))
     .then((objData) => {
-      console.log("server index get./coordinates data:", objData);
       res.send(objData);
     });
 });
@@ -49,26 +48,20 @@ app.get("/weather", function (req, res) {
   const { lat, lng, dayForForecast } = req.query;
   const weatherRequest = { lat, lng, dayForForecast };
   retrieveWeather(weatherRequest).then((objData) => {
-    console.log("server /weather data:", objData);
     res.send(objData);
   });
 });
 
 app.get("/pic", function (req, res) {
-  console.log("server /pic req.query.city:", req.query.city);
   const { city } = req.query;
   retrievePic(city).then((objData) => {
-    console.log("server /pic data:", objData);
     res.send(objData);
   });
 });
 
 app.get("/countryInfo", function (req, res) {
-  console.log("server /countryInfo req.query:", req.query);
-  console.log("server /countryInfo req.query.country:", req.query.country);
   const { country } = req.query;
   retrieveCountryInfo(country).then((objData) => {
-    console.log("server /countryInfo data:", objData);
     res.send(objData);
   });
 });

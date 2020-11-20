@@ -1,10 +1,12 @@
 const updateUIPic = async (data) => {
-  console.log("updateUIPic data: ", data);
   const cityImageSelector = document.querySelector("#cityImage");
+  const imageCaptionSelector = document.querySelector("#imageCaption");
   const imgUrl = data.webformatURL;
-  console.log("updateUIPic imgUrl: ", imgUrl);
+  const tags = data.tags;
+  const tag = tags.split(",")[0];
   try {
     cityImageSelector.setAttribute("src", imgUrl);
+    imageCaptionSelector.textContent = `${tag} image from pixabay`;
     return data;
   } catch (error) {
     console.log("error", error);

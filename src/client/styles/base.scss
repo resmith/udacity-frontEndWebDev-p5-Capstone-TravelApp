@@ -3,7 +3,10 @@
 }
 
 .image {
-  width: 320px;
-  height: 160px;
-  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 2px 2px 2px 2px;
 }

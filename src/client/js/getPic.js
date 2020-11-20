@@ -1,5 +1,4 @@
 const getPic = async (city) => {
-  console.log("getWeather city: ", city);
   const url = `http://localhost:8081/pic?city=${city}`;
   try {
     const response = await fetch(url);

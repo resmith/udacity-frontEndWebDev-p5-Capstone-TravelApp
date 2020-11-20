@@ -10,6 +10,7 @@ import { getPic } from "./js/getPic";
 import { updateUIPic } from "./js/updateUIPic";
 import { getCountryInfo } from "./js/getCountryInfo";
 import { updateUICountryInfo } from "./js/updateUICountryInfo";
+import { updateUICountdown } from "./js/updateUICountdown";
 
 export {
   app,
@@ -25,6 +26,7 @@ export {
   updateUIPic,
   getCountryInfo,
   updateUICountryInfo,
+  updateUICountdown,
 };
 
 import "./styles/resets.scss";

@@ -1,5 +1,4 @@
 const updateUICoordinates = async (data) => {
-  console.log("updateUICoordinates data: ", data);
   const coordsSelector = document.querySelector("#coords");
 
   const coordinates = `Lat: ${data.lat} Long: ${data.lng}`;

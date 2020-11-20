@@ -111,6 +111,8 @@
 
 #countDownContainer {
   grid-area: countDownContainer;
+  display: flex;
+  flex-direction: column;
 }
 
 #footer {

@@ -117,3 +117,7 @@ npm run test
 ## Additional Requirement Integrated
 
 - Integrate the REST Countries API to pull in data for the country being visited.
+
+## Additional Notes
+
+[How to include .env automatically in Jest Testing](https://medium.com/swlh/how-to-setup-dotenv-globally-with-jest-testing-in-depth-explanation-323fad824485)

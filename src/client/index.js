@@ -1,4 +1,4 @@
-import { checkForName, cleanText } from "./js/utils";
+import { cleanText } from "./js/utils";
 import { handleSubmit } from "./js/formHandler";
 import { formatDate } from "./js/formatDate";
 import { app } from "./js/app";
@@ -11,10 +11,10 @@ import { updateUIPic } from "./js/updateUIPic";
 import { getCountryInfo } from "./js/getCountryInfo";
 import { updateUICountryInfo } from "./js/updateUICountryInfo";
 import { updateUICountdown } from "./js/updateUICountdown";
+import { clearWorkBoxCache } from "./js/clearWorkBoxCache";
 
 export {
   app,
-  checkForName,
   cleanText,
   updateUICoordinates,
   getCoordinates,
@@ -31,10 +31,17 @@ export {
 
 import "./styles/resets.scss";
 import "./styles/base.scss";
-import "./styles/grid.scss";
-import "./styles/header.scss";
+import "./styles/card.scss";
 import "./styles/form.scss";
 import "./styles/footer.scss";
-import "./styles/results.scss";
+import "./styles/grid.scss";
+import "./styles/header.scss";
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Used for clearing out for dev / testing
+  clearWorkBoxCache();
+
+  app();
+});
 
 console.log("Client started");

@@ -29,10 +29,12 @@ app.listen(port, function () {
 });
 app.use(express.static("dist"));
 console.log(__dirname);
-app.get("/", function (req, res) {
-  res.sendFile("dist/index.html");
-  // res.sendFile(path.resolve(src/client/views/index.html')
-});
+
+// //-- express is serving the dist folder via express.static call above
+// app.get("/", function (req, res) {
+//   res.sendFile("dist/index.html");
+//   // res.sendFile(path.resolve(src/client/views/index.html')
+// });
 
 // *** Define Routes
 app.get("/coordinates", function (req, res) {

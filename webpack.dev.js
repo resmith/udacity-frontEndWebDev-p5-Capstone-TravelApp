@@ -24,12 +24,16 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
-      filename: "./index.html",
+      filename: "index.html",
       values: {},
     }),
     new CleanWebpackPlugin({

@@ -1,5 +1,6 @@
 const updateUIPic = async (data) => {
   const cityId = "cityImage";
+  const cityFillerImg = "cityFillerImg.jpg";
   const cityImageSelector = document.getElementById(cityId);
   const imageCaptionSelector = document.getElementById("imageCaption");
 
@@ -13,8 +14,9 @@ const updateUIPic = async (data) => {
       cityImageSelector.setAttribute("src", imgUrl);
       imageCaptionSelector.textContent = `${tag} image from pixabay`;
     } else {
-      document.getElementById(cityId).style.visibility = "hidden";
-      cityImageSelector.removeAttribute("src");
+      document.getElementById(cityId).style.visibility = "visible";
+      // document.getElementById(cityId).style.visibility = "hidden";
+      cityImageSelector.setAttribute("src", cityFillerImg);
       imageCaptionSelector.textContent = ``;
     }
     return data;

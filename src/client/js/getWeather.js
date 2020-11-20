@@ -1,5 +1,5 @@
 const getWeather = async (coords) => {
-  const url = `http://localhost:8081/weather?lat=${coords.lat}&lng=${coords.lng}`;
+  const url = `http://localhost:8081/weather?lat=${coords.lat}&lng=${coords.lng}&daysOut=${coords.daysLeft}`;
   try {
     const response = await fetch(url);
     const responseFormated = await response.json();

@@ -1,13 +1,12 @@
-const updateUICountdown = async () => {
-  const dateSelector = document.getElementById("date");
+const updateUICountdown = async (daysLeft) => {
   const countDownSelector = document.querySelector("#countDown");
-  const travelDate = new Date(dateSelector.value);
-  const currentDate = Date.now();
-  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  const daysLeft = Math.round(Math.abs((travelDate - currentDate) / oneDay));
+  const countDownText =
+    daysLeft <= 16
+      ? `${daysLeft} days left`
+      : `${daysLeft} days left <br />*forecast max is 16 days`;
 
   try {
-    countDownSelector.textContent = `${daysLeft} days left`;
+    countDownSelector.innerHTML = countDownText;
     return daysLeft;
   } catch (error) {
     console.log("error", error);

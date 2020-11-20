@@ -31,7 +31,7 @@
       <div id="cityImageContainer" class="container">
         <figure>
           <image id="cityImage" class="image" alt="Where to?"></image>
-          <figcaption id="imageCaption">Image from Pixbay</figcaption>
+          <figcaption id="imageCaption"></figcaption>
         </figure>
       </div>
       <div id="input">
@@ -59,27 +59,28 @@
         <div id="coordinatesTitle" class="">
           <h2>Coordinates</h2>
         </div>
-        <div id="coords" class="cardItemAlignent">Lat: Lng:</div>
+        <div id="coords" class="cardContent">Lat: Lng:</div>
       </div>
 
       <div id="forecastContainer" class="container">
-        <div class="">
+        <div class="cardTitle">
           <h2>Forecast</h2>
         </div>
-        <div id="forecastDesc" class="cardItemAlignent">Forecast TBD</div>
+        <div id="forecastDesc" class="cardContent">Forecast TBD</div>
       </div>
 
       <div id="factscontainer" class="container">
-        <div class="">
+        <div class="cardTitle">
           <h2>Facts</h2>
         </div>
-        <div id="facts" class="cardItemAlignent">Facts TBD</div>
+        <div id="facts" class="cardContent">Facts TBD</div>
       </div>
+
       <div id="countDownContainer" class="container">
-        <div class="cardItemAlignent">
-          <h3>Countdown</h3>
+        <div class="cardTitle">
+          <h2>Countdown</h2>
         </div>
-        <div id="countDown" class="cardItemAlignent">TBD</div>
+        <div id="countDown" class="cardContent">TBD</div>
       </div>
     </div>
 
@@ -88,7 +89,7 @@
         <p>Udacity Project demonstrating webpack & API calls</p>
       </footer>
     </div>
-    <!-- <script>
+    <script>
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
@@ -96,6 +97,6 @@
           navigator.serviceWorker.register("/service-worker.js");
         });
       }
-    </script> -->
+    </script>
   </body>
 </html>

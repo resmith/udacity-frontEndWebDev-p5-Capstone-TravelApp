@@ -45,8 +45,8 @@ app.get("/coordinates", function (req, res) {
 });
 
 app.get("/weather", function (req, res) {
-  const { lat, lng, dayForForecast } = req.query;
-  const weatherRequest = { lat, lng, dayForForecast };
+  const { lat, lng, dayForForecast, daysOut } = req.query;
+  const weatherRequest = { lat, lng, dayForForecast, daysOut };
   retrieveWeather(weatherRequest).then((objData) => {
     res.send(objData);
   });

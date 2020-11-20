@@ -11,6 +11,8 @@ const app = () => {
   const dateToday = Client.formatDate(Date.now());
   const dateInput = document.getElementById(dateInputId);
   dateInput.value = dateToday;
+
+  document.getElementById("cityImage").style.visibility = "hidden";
 };
 
 export { app };

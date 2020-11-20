@@ -85,39 +85,35 @@ npm run test
 
 ### Geonames
 
-Input: City
-Return: Coordinates (latitude, longitude, country,)
+- Input: City
+- Return: Coordinates (latitude, longitude, country,)
 
 [Geonames API](http://www.geonames.org/export/web-services.html)
 
 ### WeatherBit
 
-Input: Zip Code
-Send: Weather Forecast
+- Input: Zip Code
+- Send: Weather Forecast
 
 [WeatherBit API](https://www.weatherbit.io/api)
 
-Input: Coordinate
-Return: Weather Forecast
+- Input: Coordinate
+- Return: Weather Forecast
 
 ## Rest Pixabay
 
 [Pixabay API](https://pixabay.com/api/docs/)
 
-Input: Coordinate
-Return: Images of the area
+- Input: Coordinate
+- Return: Images of the area
 
 ## Rest Countries
 
 [Rest Countries](https://restcountries.eu/)
 
-Input: Location
-Return: Information about the country
+- Input: Location
+- Return: Information about the country
 
-## Additional Requirements
+## Additional Requirement Integrated
 
-Add end date and display length of trip.
-Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities).
-
-Integrate the REST Countries API to pull in data for the country being visited.
-Incorporate icons into forecast.
+- Integrate the REST Countries API to pull in data for the country being visited.

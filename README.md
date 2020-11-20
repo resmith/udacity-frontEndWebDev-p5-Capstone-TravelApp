@@ -96,18 +96,21 @@ Input: Zip Code
 Send: Weather Forecast
 
 [WeatherBit API](https://www.weatherbit.io/api)
+
 Input: Coordinate
 Return: Weather Forecast
 
 ## Rest Pixabay
 
 [Pixabay API](https://pixabay.com/api/docs/)
+
 Input: Coordinate
 Return: Images of the area
 
 ## Rest Countries
 
 [Rest Countries](https://restcountries.eu/)
+
 Input: Location
 Return: Information about the country
 

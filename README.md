@@ -61,9 +61,9 @@ To run the test
 
 ```
 cd <directoryClonedTo>
-API_GEONAME_KEY=<yourAPiKey - without quotes>
-API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
-API_PIXABAY_KEY=<yourAPiKey - without quotes>
+export API_GEONAME_KEY=<yourAPiKey - without quotes>
+export API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
+export API_PIXABAY_KEY=<yourAPiKey - without quotes>
 npm run test
 ```
 

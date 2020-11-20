@@ -9,12 +9,19 @@ async function retrievePic(city) {
   if (!API_KEY) {
     console.log("ERROR: API_WEATHERBIT_KEY not defined in ENV");
   }
+
   const encodedCity = encodeURIComponent(city);
   const url = `https://pixabay.com/api/?key=${API_KEY}&q=${encodedCity}&image_type=photo&category=places&per_page=3`;
   try {
     const req = await fetch(url);
     const reqData = await req.json();
-    const parsedData = reqData.hits[0];
+    const parsedData =
+      reqData.total > 0
+        ? {
+            webformatURL: reqData.hits[0].webformatURL,
+            tags: reqData.hits[0].tags,
+          }
+        : { webformatURL: "", tags: "" };
     return parsedData;
   } catch (error) {
     console.log("error", error);

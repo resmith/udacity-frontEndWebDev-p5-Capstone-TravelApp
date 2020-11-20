@@ -1,4 +1,5 @@
 const updateUICountdown = async (daysLeft) => {
+  console.log("updateUICountdown daysLeft: ", daysLeft);
   const countDownSelector = document.querySelector("#countDown");
   const countDownText =
     daysLeft <= 16

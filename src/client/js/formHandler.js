@@ -26,9 +26,9 @@ const handleSubmit = (event) => {
       .then((forecast) => Client.updateUIWeather(forecast))
       .then(() => Client.getCountryInfo(forecastInfo.countryCode))
       .then((countryInfo) => Client.updateUICountryInfo(countryInfo))
+      .then(() => Client.updateUICountdown(daysLeft))
       .then(() => Client.getPic(city))
-      .then((picInfo) => Client.updateUIPic(picInfo))
-      .then(() => Client.updateUICountdown(daysLeft));
+      .then((picInfo) => Client.updateUIPic(picInfo));
   } else {
     alert("Need to enter a city first");
   }

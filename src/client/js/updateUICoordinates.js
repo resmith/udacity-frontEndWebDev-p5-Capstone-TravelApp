@@ -1,12 +1,11 @@
 const updateUICoordinates = async (data) => {
   console.log("updateUICoordinates data: ", data);
-  const latSelector = document.querySelector("#lat");
-  const longSelector = document.querySelector("#long");
+  const coordsSelector = document.querySelector("#coords");
 
+  const coordinates = `Lat: ${data.lat} Long: ${data.lng}`;
   try {
-    latSelector.textContent = data.lat;
-    longSelector.textContent = data.lng;
-    return;
+    coordsSelector.textContent = coordinates;
+    return data;
   } catch (error) {
     console.log("error", error);
   }

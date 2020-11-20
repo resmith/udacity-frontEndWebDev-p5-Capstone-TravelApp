@@ -1,8 +1,15 @@
 import { checkForName, cleanText } from "./js/utils";
-import { updateUICoordinates } from "./js/updateUICoordinates";
-import { getCoordinates } from "./js/getCoordinates";
 import { handleSubmit } from "./js/formHandler";
+import { formatDate } from "./js/formatDate";
 import { app } from "./js/app";
+import { getCoordinates } from "./js/getCoordinates";
+import { updateUICoordinates } from "./js/updateUICoordinates";
+import { getWeather } from "./js/getWeather";
+import { updateUIWeather } from "./js/updateUIWeather";
+import { getPic } from "./js/getPic";
+import { updateUIPic } from "./js/updateUIPic";
+import { getCountryInfo } from "./js/getCountryInfo";
+import { updateUICountryInfo } from "./js/updateUICountryInfo";
 
 export {
   app,
@@ -11,6 +18,13 @@ export {
   updateUICoordinates,
   getCoordinates,
   handleSubmit,
+  formatDate,
+  getWeather,
+  updateUIWeather,
+  getPic,
+  updateUIPic,
+  getCountryInfo,
+  updateUICountryInfo,
 };
 
 import "./styles/resets.scss";

@@ -9,9 +9,11 @@ const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
 
 // Application code
-// import { retrieveCoordinates } from "../retrieveCoordinates";
 const retrieveCoordinates = require("./retrieveCoordinates");
 const createCoordinatesObject = require("./createCoordinatesObject");
+const retrieveWeather = require("./retrieveWeather");
+const retrievePic = require("./retrievePic");
+const retrieveCountryInfo = require("./retrieveCountryInfo");
 
 // Define constants
 const app = express();
@@ -34,7 +36,6 @@ app.get("/", function (req, res) {
 
 // *** Define Routes
 app.get("/coordinates", function (req, res) {
-  console.log("server index get./meaning req.query.city:", req.query.city);
   const { city } = req.query;
   retrieveCoordinates(city)
     .then((data) => createCoordinatesObject(data))
@@ -42,4 +43,32 @@ app.get("/coordinates", function (req, res) {
       console.log("server index get./coordinates data:", objData);
       res.send(objData);
     });
+});
+
+app.get("/weather", function (req, res) {
+  const { lat, lng, dayForForecast } = req.query;
+  const weatherRequest = { lat, lng, dayForForecast };
+  retrieveWeather(weatherRequest).then((objData) => {
+    console.log("server /weather data:", objData);
+    res.send(objData);
+  });
+});
+
+app.get("/pic", function (req, res) {
+  console.log("server /pic req.query.city:", req.query.city);
+  const { city } = req.query;
+  retrievePic(city).then((objData) => {
+    console.log("server /pic data:", objData);
+    res.send(objData);
+  });
+});
+
+app.get("/countryInfo", function (req, res) {
+  console.log("server /countryInfo req.query:", req.query);
+  console.log("server /countryInfo req.query.country:", req.query.country);
+  const { country } = req.query;
+  retrieveCountryInfo(country).then((objData) => {
+    console.log("server /countryInfo data:", objData);
+    res.send(objData);
+  });
 });

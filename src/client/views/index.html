@@ -7,8 +7,6 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!--Import materialize.css-->
-
     <!-- Compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -23,29 +21,29 @@
     <title>Travel App</title>
   </head>
 
-  <body>
+  <body onload="Client.app()">
     <div id="pageContainer">
       <div id="header">
         <header class="header">
           <h1>Travel Planner</h1>
         </header>
       </div>
-      <div id="cityImage">
-        <image></image>
+      <div id="cityImageContainer" class="container">
+        <image id="cityImage" class="image" alt="temp image"></image>
       </div>
       <div id="input">
         <section>
           <h2>Trip</h2>
           <div class="card light-grey cardMods">
-            <form class="" onsubmit="return Client.handleSubmit(event)">
+            <form class="">
               <input id="city" type="text" name="city" placeholder="City" />
               <input id="date" type="date" name="date" placeholder="" />
               <button
+                id="submitBtn"
                 class="waves-effect waves-light btn"
                 type="submit"
                 name="submit"
                 value="submit"
-                onclick="return Client.handleSubmit(event)"
               >
                 Submit
               </button>
@@ -54,21 +52,32 @@
         </section>
       </div>
 
-      <div id="coordinatesContainer">
-        <section>
+      <div id="coordinatesContainer" class="container">
+        <div id="coordinatesTitle" class="">
           <h2>Coordinates</h2>
-
-          <div id="lat">Lat TBD</div>
-          <div id="long">Long TBD</div>
-        </section>
+        </div>
+        <div id="coords" class="cardItemAlignent">Lat:  Lng: </div>
       </div>
 
-      <div id="forecastContainer">
-        <section>
+      <div id="forecastContainer" class="container">
+        <div class="">
           <h2>Forecast</h2>
+        </div>
+        <div id="forecastDesc" class="cardItemAlignent">Forecast TBD</div>
+      </div>
 
-          <div id="forecast">Forecast TBD</div>
-        </section>
+      <div id="factscontainer" class="container">
+        <div class="">
+          <h2>Facts</h2>
+        </div>
+        <div id="facts" class="cardItemAlignent">Facts TBD</div>
+      </div>
+      <div id="countDownContainer" class="container">
+        <div class="cardItemAlignent">
+          <h3>Countdown</h3>
+        </div>
+        <div id="countDown" class="cardItemAlignent">TBD</div>
+      </div>
       </div>
 
       <div id="footer">

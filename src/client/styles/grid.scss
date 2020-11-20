@@ -5,9 +5,9 @@
     grid-template-rows: 7vh 20vh 20vh 20vh 20vh;
     grid-template-areas:
       ". header header"
-      "cityImage input input"
-      "cityImage coordinatesContainer coordinatesContainer"
-      "cityImage forecastContainer forecastContainer"
+      "cityImageContainer input input"
+      "cityImageContainer coordinatesContainer coordinatesContainer"
+      "cityImageContainer forecastContainer forecastContainer"
       ". footer footer";
   }
 
@@ -20,14 +20,19 @@
 @media (min-width: 800px) and (max-width: 1200px) {
   #pageContainer {
     display: grid;
-    grid-template-columns: 30vw 30vw 30vw;
-    grid-template-rows: 7vh 40vh 20vh 20vh 20vh;
+    grid-template-columns: 20vw 35vw 35vw;
+    grid-template-rows: 15vh 2vh 30vh 2vh 10vh 2vh 10vh 2vh 20vh 2vh;
     grid-template-areas:
       ". header header"
-      "cityImage input input"
-      "cityImage coordinatesContainer coordinatesContainer"
-      "cityImage forecastContainer forecastContainer"
-      ". Facts Facts";
+      ". . ."
+      "cityImageContainer input input"
+      "cityImageContainer . ."
+      "cityImageContainer coordinatesContainer coordinatesContainer"
+      "nada . ."
+      "nada forecastContainer forecastContainer"
+      "nada . ."
+      "countDownContainer factscontainer factscontainer"
+      ". footer footer";
   }
 
   body {
@@ -44,8 +49,12 @@
     grid-template-areas:
       ". header header"
       ". input input"
-      "cityImage coordinatesContainer coordinatesContainer"
-      ". forecastContainer forecastContainer"
+      "cityImageContainer . ."
+      "cityImageContainer coordinatesContainer coordinatesContainer"
+      "cityImageContainer forecastContainer forecastContainer"
+      "cityImageContainer . ."
+      "cityImageContainer factscontainer factscontainer"
+      "cityImageContainer . ."
       ". footer footer";
   }
 
@@ -62,18 +71,52 @@
   grid-area: input;
 }
 
-#cityImage {
-  grid-area: cityImage;
+#cityImageContainer {
+  grid-area: cityImageContainer;
 }
 
 #coordinatesContainer {
   grid-area: coordinatesContainer;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  vertical-align: middle;
+  margin: 4px 2px 2px 2px;
+  padding: 6px 2px 4px 2px;
+  background-color: rgb(210, 227, 231);
+  border-radius: 4px;
+  box-shadow: 4px 4px grey;
+  width: 80%;
+}
+
+.cardItemAlignent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 #forecastContainer {
   grid-area: forecastContainer;
 }
 
+#factscontainer {
+  grid-area: factscontainer;
+}
+
+#countDownContainer {
+  grid-area: countDownContainer;
+}
+
 #footer {
   grid-area: footer;
+}
+
+#nada {
+  grid-area: nada;
 }

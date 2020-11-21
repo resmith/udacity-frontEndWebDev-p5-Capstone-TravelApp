@@ -39,7 +39,7 @@ import "./styles/header.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Used for clearing out for dev / testing
-  clearWorkBoxCache();
+  // clearWorkBoxCache();
 
   app();
 });

@@ -1,11 +1,11 @@
 @media (max-width: 800px) {
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-content: center;
     vertical-align: middle;
-    margin: 4px 2px 2px 14px;
+    margin: 4px 2px 6px 14px;
     padding: 6px 2px 4px 2px;
     background-color: rgb(210, 227, 231);
     border-radius: 4px;
@@ -16,6 +16,9 @@
   .cardTitle {
     margin: 6px 2px 2px 8px;
     width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .cardContent {
@@ -26,9 +29,35 @@
     align-items: flex-start;
     margin: 10px 2px 2px 8px;
   }
-  .smRowlgCol {
+
+  .lgCol {
     display: flex;
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    position: relative;
+  }
+
+  .image {
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+  }
+
+  .imageCaption {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: white;
+  }
+
+  .cardContent {
+    display: flex;
+    flex: 1;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 2px 2px 8px;
   }
 }
 
@@ -61,8 +90,24 @@
     margin: 6px 2px 2px 8px;
   }
 
-  .smRowlgCol {
+  .lgCol {
     display: flex;
     flex-direction: column;
+  }
+
+  .imageContainer {
+    position: relative;
+  }
+
+  .image {
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+  }
+
+  .imageCaption {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: blacks;
   }
 }

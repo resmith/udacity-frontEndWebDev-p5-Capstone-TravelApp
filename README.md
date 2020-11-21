@@ -33,6 +33,8 @@ git clone <thisRepo>
 API_GEONAME_KEY=<yourAPiKey - without quotes>
 API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
 API_PIXABAY_KEY=<yourAPiKey - without quotes>
+SESSION_KEY=<key>
+PORT=<Port#>
 ```
 
 \*note:
@@ -59,11 +61,16 @@ npm run build-dev
 
 To run the test
 
+- Ensure that the .env has the appropriate keys setup:
+
+API_GEONAME_KEY=<yourAPiKey - without quotes>
+API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
+API_PIXABAY_KEY=<yourAPiKey - without quotes>
+
+Then:
+
 ```
 cd <directoryClonedTo>
-export API_GEONAME_KEY=<yourAPiKey - without quotes>
-export API_WEATHERBIT_KEY=<yourAPiKey - without quotes>
-export API_PIXABAY_KEY=<yourAPiKey - without quotes>
 npm run test
 ```
 

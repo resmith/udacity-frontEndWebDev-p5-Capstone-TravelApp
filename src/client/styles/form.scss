@@ -17,14 +17,20 @@
     margin: 8px 8px 8px 8px;
   }
   .buttonPrimary {
-    display: block;
+    display: inline-block;
     background-color: rgb(85, 134, 145);
     border-radius: 4px;
     box-shadow: 2px 2px grey;
     margin: 4px 4px 4px 40px;
     font-size: 1em;
     height: 25px;
-    width: 60px;
+    width: 120px;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+    color: white;
   }
 }
 
@@ -47,12 +53,24 @@
     margin: 8px 8px 8px 8px;
   }
   .buttonPrimary {
-    display: block;
+    display: inline-block;
     background-color: rgb(85, 134, 145);
     border-radius: 4px;
     box-shadow: 4px 4px grey;
     margin: 14px 4px 4px 40px;
     height: 40px;
-    width: 60px;
+    width: 120px;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+    color: white;
   }
+}
+
+.buttonPrimary:hover,
+.buttonPrimary:focus {
+  background-color: #2098d1;
+  color: white;
 }
